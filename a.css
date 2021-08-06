@@ -1,0 +1,71 @@
+#nav{
+    justify-content: space-between;
+}
+#first{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+#hotel:hover{
+    color: azure;
+}
+
+#sd{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-top: 40px;
+}
+#gk:hover{
+    color: rgba(240, 255, 255, 0.562);
+}
+#a{
+    margin-left: 117px;
+    margin-top: 25px;
+    margin-bottom: 14px;
+    background: none;
+    color: #ff3c00;
+    border: 2px solid;
+    font-family: 'Roboto Mono', sans-serif;
+    transition: all 0.3s;
+}
+#a:hover{
+    border-color: #b4e20c;
+    color:  rgb(0, 0, 0);
+    box-shadow: 0 0.7em 0.5em -0.4em #b4e20c;
+    transform: translateY(-0.25em) 
+}
+#b{
+    margin-left: 355px;
+    margin-top: 5px;
+    margin-bottom: 14px;
+    background: none;
+    color: #ff3c00;
+    border: 2px solid;
+    font-family: 'Roboto Mono', sans-serif;
+    transition: all 0.3s;
+}
+#b:hover{
+    border-color: #b4e20c;
+    color:  rgb(0, 0, 0);
+    box-shadow: 0 0.7em 0.5em -0.4em #b4e20c;
+    transform: translateY(-0.25em) 
+}
+#c{
+    display: flex;
+    flex-direction: row;
+    
+}
+#d{
+    display: flex;
+    flex-direction: row;
+    margin-left: 525px;
+    margin-top: -25px;
+    
+}
+#d{
+    margin-top: -299px;
+}
+
+
