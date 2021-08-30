@@ -15,9 +15,11 @@
             transition: 1s background-color;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
-<body>
+
     <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top">
         <a class="navbar-brand" href="#">Mcn Theater</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,26 +40,26 @@
                 <a class="dropdown-item" href="#">French</a>
             </li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
-          </form>
+        
         </div>
       </nav>
     <h1>MCN Theater</h1>
     <h2>Todays Inbox!</h2>
-    <div id="first">
-        <a href="index.html"><img src="download (1).jpeg" alt="" id="hotel">
+    <div id = content>
+        <div id="first">
+            <a href="index.html"><img src="download (1).jpeg" alt="" id="hotel">
             <a href="index.html"><img src="download (2).jpeg" alt="" id="end"></a>
             <a href="index.html"><img src="download (3).jpeg" id="cod"></a>
 
 
+        </div>
+        <div id="sd">
+            <a href="index.html"><img src="download (4).jpeg" alt="" id="mib"></a>
+            <a href="index.html"><img src="ff.jpeg" id="ff"></a>
+            <a href="index.html"><img src="gvsk.jpeg" id="gs"></a>
+        </div>
     </div>
-    <div id="sd">
-        <a href="index.html"><img src="download (4).jpeg" alt="" id="mib"></a>
-        <a href="index.html"><img src="ff.jpeg" id="ff"></a>
-        <a href="index.html"><img src="gvsk.jpeg" id="gs"></a>
-    </div>
+<footer>
     <br>
     <h2>Food</h2>
     <div id="st">
@@ -74,7 +76,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
     
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent2">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
@@ -94,10 +96,15 @@
                     </li>
     
                 </ul>
+                <form class="form-inline my-2 my-lg-0" id = "form">
+                    <input name = "query" class="form-control mr-sm-2" id = "Search" type="search" placeholder="Search" aria-label="Search">
+                    <button id = "button" href ="searchm.html" class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+                  </form>
                 <form class="form-inline my-2 my-lg-0">
                 </form>
             </div>
         </nav>
+</footer>
     </footer>
     <script src="movies.js"></script>
     <script src="app.js"></script>
@@ -114,6 +121,6 @@
 
 
 
-</body>
+
 
 </html>

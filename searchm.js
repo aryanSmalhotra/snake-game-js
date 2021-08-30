@@ -36,26 +36,9 @@ form.addEventListener('submit', async function(e){
     e.preventDefault();
     const usesearch=(form.elements.query.value)
     const searchRes = await axios.get(`https://api.tvmaze.com/search/shows?q=${usesearch}`)
-    ImgMaker(searchRes.data);
+    console.log(searchRes.data)
+    const img = document.createElement('IMG')
+    img.src = searchRes.data[0].show.image.medium
+    document.body.append(img)
 
 })
-const ImgMaker = (shows) =>{
-    for(let results of shows){
-        if(results.show.image){
-            const img = document.createElement('IMG')
-            img.src = results.show.image.medium
-            document.body.append(img)
-
-        }
-
-    }
-}
-
-
-
-
-
-
-
-
-
