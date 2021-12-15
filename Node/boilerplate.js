@@ -1,5 +1,5 @@
 const fs = require('fs');
-const foldername = process.argv[2] || 'Project'
+const foldername = process.argv[4] || 'Project'
 try{
     fs.mkdirSync(foldername);
     fs.writeFileSync(`${foldername}/index.html`)

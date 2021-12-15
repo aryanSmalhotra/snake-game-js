@@ -1,0 +1,48 @@
+{
+    "Valorant":{
+        "name":"Valorant",
+        "subscribers": 16000000,
+        "description": " The valorant subreddit. News, Upcoming Tournaments and updated are here",
+        "posts":[
+            {
+                "title": "New agent release Hoxic ",
+                "author": "Goodu lal"
+            },
+            {
+                "title": "Duno best Valorant player?",
+                "author":"Odd person"
+
+            },
+            {
+            "title": "Is next ignition series in India",
+            "author":"Forsaken is the best"
+
+            }
+        ]
+    },
+    "Csgo":{
+        "name":"Csgo",
+        "subscribers": 14000,
+        "description": " The Csgo subreddit. News, Upcoming Tournaments and updated are here",
+        "posts":[
+            {
+                "title": "Is csgo going to die ",
+                "author": "Goodu lal"
+            },
+            {
+                "title": "Smithzz best csgo player?",
+                "author":"Odd person",
+                "img":"https://mircsgo.org/wp-content/uploads/2016/08/Smithzz.jpeg"
+
+
+            },
+            {
+            "title": "Will csgo come to India again",
+            "author":"Forsaken is the best",
+            "img": "https://www.greenmangaming.com/newsroom/wp-content/uploads/2018/10/blog_csgo_forsaken.jpg"
+
+            }
+        ]
+    }
+}
+
