@@ -1,64 +1,81 @@
 const grid = document.querySelector('.grid')
-const Button = document.getElementById('start')
+const startButton = document.getElementById('start')
 const score = document.getElementById('score')
 let squares = []
 let currentSnake = [2,1,0]
 let direction = 1
+let width = 10
+let appleIndex = 0
 
 function createGrid() {
-    //create 100 squares
+    //create grid
     for (let i=0; i < 100; i++) {
-     //creating elements
+     //create element
     const square = document.createElement('div')
-    console.log(square)
-
-    square.classList.add("square")
-
+    //style
+    square.classList.add('square')
+    
     grid.appendChild(square)
-    //adding styles
-    
-    //pushing the elemnent and css to the grid
+       
     squares.push(square)
-
-    
     }
-    console.log(squares)
 }
 createGrid()
-//snakes body
+
 currentSnake.forEach(index => squares[index].classList.add('snake'))
 
-function move(){
-    //adding a block to the snakes body 
+function move() {
+    if (
+        (currentSnake[0] + width >= 100 && direction===10) ||
+        (currentSnake[0]% width ===9 && direction===1)||
+        (currentSnake[0]% width === 0 && direction===-1)||
+        (currentSnake[0]-width<0 && direction=== -10)||
+        squares[currentSnake[0]+direction].classList.contains('snake')
+
+    )
+    return clearInterval(timerId)
+
+
+
+    
     const tail = currentSnake.pop()
-    console.log(tail)
-    console.log(currentSnake)
+    
     squares[tail].classList.remove('snake')
-    currentSnake.unshift(currentSnake[0]+direction)
-    console.log(currentSnake)
+    
+    currentSnake.unshift(currentSnake[0] + direction)
     
     squares[currentSnake[0]].classList.add('snake')
-
 }
 move()
-let timerId=setInterval(move,1000)
 
-clearInterval(timerId)
+let timerId = setInterval(move, 1000)
+function genarateFood(){
+    do{
+        //generate a random number
+        appleIndex = Math.floor(Math.random() * squares.length)
+    } while (squares[appleIndex].classList.contains('snake'))
+    squares[appleIndex].classList.add('apple')
+}
+genarateFood()
+
+
+
+
 
 
 function control(e) {
-    //adding direction
     if (e.keyCode === 39) {
         console.log('right pressed')
-        direction=1
+        direction = 1
     } else if (e.keyCode === 38) {
-        direction = -width
         console.log('up pressed')
+        direction = -width
     } else if (e.keyCode === 37) {
         console.log('left pressed')
         direction = -1
     } else if (e.keyCode === 40) {
         console.log('down pressed')
+        direction = +width
     }
 }
 document.addEventListener('keyup', control)
